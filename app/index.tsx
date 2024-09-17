@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, Button, TouchableOpacity } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import { BorderlessButton } from "react-native-gesture-handler";
 import { useAnimatedKeyboard } from "react-native-reanimated";
-import ListaProdutos from "@/Componentes/Adaptadores/ListaProdutos";
+import ListaProdutos from "./Componentes/Adaptadores/ListaProdutos";
 import { useEffect } from "react";
 import Style from "./Styles/Default";
 import axios from "axios";
@@ -44,15 +44,15 @@ function carregarProdutos(){
     <View
       style={Style.container}
       >
-      <ListaProdutos produtos={produtos}aoAtualizar={carregarProdutos}></ListaProdutos>
+      <ListaProdutos produtos={produtos}Atualizar={carregarProdutos}></ListaProdutos>
 
-      <Button title='Cadastrar' onPress={()=>{telaCadastro()}}></Button>
+      <Button title='Adicionar' onPress={()=>{telaCadastro()}}></Button>
 
 
     </View>
   );
   function telaCadastro(){
-    router.push('/Telas/cadastro');
+    router.push('/Telas/Cadastro');
     
   }
   
@@ -65,16 +65,16 @@ const estilo = StyleSheet.create({
     alignItems: "flex-start",
     backgroundColor: "white",
     padding: 20,
-    borderRadius: 10,
+    borderRadius: 20,
     borderWidth: 5,
-    borderColor: "white",
+    borderColor: "black",
     marginBottom: 20,
     
 
   },
   text: {
     color: "black",
-    fontSize: 25,
+    fontSize: 20,
     fontFamily: "sanserifa",
     marginBottom: 10,
     textAlign: "left",
@@ -82,16 +82,16 @@ const estilo = StyleSheet.create({
   },
 
   titulo:{
-    color: "black",
-    fontSize: 30,
+    color: "white",
+    fontSize: 25,
     fontFamily: "sanserifa",
     marginBottom: 10,
     textAlign: "left",
     fontWeight: "bold",
     textTransform: "uppercase",
-    backgroundColor: "lightblue",
+    backgroundColor: "brown",
     padding: 10,
-    borderRadius: 10,
+    borderRadius: 20,
   }
 
 });
