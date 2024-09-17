@@ -1,22 +1,26 @@
-import {View} from "react-native"
-import ItemProduto from "../ItemProduto"
-import Style from "@/app/Styles/Default"
-import { ScrollView} from "react-native-gesture-handler"
-//import Produtos from ""
+import { ScrollView, View } from "react-native";
+import ItemProduto from "../ItemProduto";
+import Style from "@/app/Styles/Default";
+import Produto from "@/app/Models/Produto";
+import React from "react";
 
-// function ListaProdutos({produtos}: [produtos:Produto[]]
-//     {produtos:{id: number, nome: string, preco: number}[]}) {
-//     return (
-//         <ScrollView>
+interface PropListaProd{
+    produtos:Produto[];
+    Atualizar?:Function;
+}
 
-//         <View style={Style.container}>
-//             {produtos.map((p) => <ItemProduto produto={p} key={p.id} >
 
-//             </ItemProduto>)}
-//         </View>
+const ListaProdutos:React.FC<PropListaProd> =({ produtos, Atualizar})=> {
+    return (
+    <ScrollView>
+        <View style = {Style.container}>
+        {produtos.map((p) => 
+        <ItemProduto produto ={p}key={p.id} aoExcluir={()=>{Atualizar?.call(null)}}>
+            
+        </ItemProduto>)}
+        </View>
+    </ScrollView>
+    )
+}
 
-//         </ScrollView>
-//     )
-// }
-
-//export default ListaProdutos
+export default ListaProdutos

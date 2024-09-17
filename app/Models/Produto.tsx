@@ -1,12 +1,12 @@
 enum categoria{
     "ração",
-    "brinquedos"
+    "brinquedo"
 }
 
-interface Produto {
+export default interface Produto {
 
 id:number,
-    nome: string,
+nome: string,
 descricao:string,
 foto:string,
 preco:number,
