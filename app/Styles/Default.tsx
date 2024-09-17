@@ -12,11 +12,11 @@ const Style = StyleSheet.create({
       height: 200,
       backgroundColor: '#fff',
       borderRadius: 10,
-      elevation: 5, // Android
-      shadowColor: '#000', // iOS
-      shadowOffset: { width: 0, height: 2 }, // iphone
-      shadowOpacity: 0.1, // iphone
-      shadowRadius: 4, // iphone
+      elevation: 5, 
+      shadowColor: '#000', 
+      shadowOffset: { width: 0, height: 2 }, 
+      shadowOpacity: 0.1, 
+      shadowRadius: 4, 
       justifyContent: 'center',
       alignItems: 'center',
       padding: 20,
